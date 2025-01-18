@@ -1,5 +1,7 @@
 local network
 
+print('Hello')
+
 for i, v in next, getgc(true) do
     if typeof(v) == 'table' then
         if rawget(v, 'send') and rawget(v, 'add') then
