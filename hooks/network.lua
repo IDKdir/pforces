@@ -1,10 +1,8 @@
 local network
 
-print('Hello')
-
 for i, v in next, getgc(true) do
     if typeof(v) == 'table' then
-        if rawget(v, 'send') and rawget(v, 'add') then
+        if rawget(v, 'send') and rawget(v, 'receive') then
             network = v
         end
     end
